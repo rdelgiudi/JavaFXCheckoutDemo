@@ -6,7 +6,7 @@ Prosta symulacja kasy samoobsługowej to aplikacja napisana w języku Java z uż
 
 ### Wymagania systemowe
 
-Aby uruchomić symulator samoobsługowej kasy rekomenduję openjdk-20.
+Aby skompilować symulator samoobsługowej kasy rekomenduję openjdk-20.
 
 ## Uruchomienie aplikacji
 
