@@ -3,7 +3,8 @@
 ## Opis projektu
 
 Prosta symulacja kasy samoobsługowej to aplikacja napisana w języku Java z użyciem JavaFX, która umożliwia przeprowadzenie symulacji obsługi klientów w sklepie samoobsługowym. Aplikacja pozwala na dodanie produktów do koszyka, skanowanie kodów kreskowych, obliczenie ceny zakupów oraz dokonanie płatności za pomocą różnych form płatności, w tym gotówki, karty kredytowej i debetowej.
-Wymagania systemowe
+
+### Wymagania systemowe
 
 Aby uruchomić symulator samoobsługowej kasy rekomenduję openjdk-20.
 
