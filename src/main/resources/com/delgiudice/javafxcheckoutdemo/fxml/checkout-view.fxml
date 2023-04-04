@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to right, #ad5389, #3c1053);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.delgiudice.javafxcheckoutdemo.CheckoutController">
+   <children>
+      <ListView fx:id="itemField" prefHeight="646.0" prefWidth="685.0" style="-fx-font-size: 14; -fx-font-family: monospace;" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <VBox fx:id="cashPaymentBox" layoutX="780.0" layoutY="48.0" prefHeight="262.0" prefWidth="468.0" visible="false">
+         <children>
+            <Label alignment="CENTER" prefHeight="68.0" prefWidth="522.0" text="Płatność gotówką:" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="cashPaymentTotalLabel" alignment="CENTER" prefHeight="68.0" prefWidth="522.0" text="Do zapłaty: 0.00" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="cashPaymentPaidLabel" alignment="CENTER" prefHeight="68.0" prefWidth="522.0" text="Zapłacono: 0.00" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="68.0" prefWidth="124.0" text="Wprowadź gotówkę:" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="10.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="cashPaymentField" />
+                  <Button fx:id="addCashFundsButton" mnemonicParsing="false" onAction="#addCashFunds" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #87CEEB;" text="Wprowadź" />
+               </children>
+            </HBox>
+            <Label fx:id="cashPaymentCompleteLabel" alignment="CENTER" prefHeight="68.0" prefWidth="468.0" text="Dziękujemy za zakupy!" textAlignment="CENTER" textFill="LIME" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox fx:id="cardPaymentBox" alignment="CENTER" layoutX="790.0" layoutY="58.0" prefHeight="262.0" prefWidth="468.0" visible="false">
+         <children>
+            <Label alignment="CENTER" prefHeight="68.0" prefWidth="522.0" text="Płatność kartą:" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="cardPaymentTotalLabel" alignment="CENTER" prefHeight="68.0" prefWidth="522.0" text="Do zapłaty: 0.00" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="cardPaymentPaidLabel" alignment="CENTER" prefHeight="68.0" prefWidth="522.0" text="Zapłacono: 0.00" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="useCardButton" alignment="CENTER" mnemonicParsing="false" onAction="#addCardFunds" prefHeight="85.0" prefWidth="251.0" style="-fx-background-color: linear-gradient(to top right, #2d388a, #00aeef);" text="Przyłóż kartę" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+            </Button>
+            <Label fx:id="cardPaymentCompleteLabel" alignment="CENTER" prefHeight="68.0" prefWidth="468.0" text="Dziękujemy za zakupy!" textAlignment="CENTER" textFill="LIME" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox fx:id="productInput" alignment="CENTER" prefHeight="370.0" prefWidth="203.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <Button fx:id="productListButton" mnemonicParsing="false" onAction="#openProductList" prefHeight="57.0" prefWidth="117.0" style="-fx-background-color: #87CEEB;" text="Lista Produktów" />
+            <HBox prefHeight="29.0" prefWidth="207.0" spacing="10.0">
+               <children>
+                  <Label contentDisplay="CENTER" prefHeight="24.0" prefWidth="50.0" text="Kod:" textFill="WHITE" />
+                  <TextField fx:id="codeField" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <Button fx:id="selectProductButton" mnemonicParsing="false" onAction="#selectProduct" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #87CEEB;" text="Wybierz" />
+            <HBox prefHeight="32.0" prefWidth="207.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="91.0" text="Masa (g):" textFill="WHITE" />
+                  <TextField fx:id="weightField" />
+               </children>
+            </HBox>
+            <Button fx:id="addProductButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#addProduct" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #87CEEB;" text="Do koszyka" />
+            <Label fx:id="weightSuggestionLabel" prefHeight="17.0" prefWidth="197.0" text="Oczekiwana masa:" textFill="WHITE" />
+         </children>
+      </VBox>
+      <VBox fx:id="paymentBox" layoutX="735.0" layoutY="48.0" prefHeight="311.0" prefWidth="522.0" visible="false">
+         <children>
+            <Label alignment="CENTER" prefHeight="68.0" prefWidth="522.0" text="Wybierz metodę płatności:" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="118.0" prefWidth="522.0" spacing="20.0">
+               <children>
+                  <Button fx:id="paymentCardButton" mnemonicParsing="false" onAction="#processCardPayment" prefHeight="122.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to top right, #2d388a, #00aeef);" text="Karta" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="paymentCashButton" mnemonicParsing="false" onAction="#processCashPayment" prefHeight="122.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to top right, #2d388a, #00aeef);" text="Gotówka" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label fx:id="totalLabel" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="683.0" prefHeight="36.0" prefWidth="685.0" style="-fx-font-weight: bold;" text="Razem:      0.00" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="productError" layoutX="886.0" layoutY="666.0" prefHeight="32.0" prefWidth="220.0" text="Niepoprawne dane produktu!" textFill="RED" visible="false" AnchorPane.bottomAnchor="22.0" AnchorPane.rightAnchor="250.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="productSuccess" layoutX="886.0" layoutY="660.0" prefHeight="32.0" prefWidth="220.0" text="Kod produktu wprowadzony!" textFill="LIME" visible="false" AnchorPane.bottomAnchor="22.0" AnchorPane.rightAnchor="250.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="payButton" disable="true" layoutX="732.0" layoutY="579.0" mnemonicParsing="false" onAction="#beginPayment" prefHeight="85.0" prefWidth="251.0" style="-fx-background-color: linear-gradient(to top right, #2d388a, #00aeef);" text="Zakończ i zapłać" textFill="WHITE" AnchorPane.bottomAnchor="60.0">
+         <font>
+            <Font name="Verdana Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelPaymentButton" layoutX="765.0" layoutY="360.0" mnemonicParsing="false" onAction="#cancelPayment" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #87CEEB;" text="Anuluj" visible="false" />
+   </children>
+</AnchorPane>

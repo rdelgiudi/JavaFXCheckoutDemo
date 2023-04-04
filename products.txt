@@ -1,0 +1,160 @@
+09871;Bułka pszenna;0.99;100;0
+23710;Kiwi;4.99;-1;1
+31289;Cebula dymka;1.49;-1;2
+46035;Mydło w płynie;9.99;500;4
+58620;Cytryna;3.99;-1;1
+65742;Papryka żółta;3.99;-1;2
+74290;Szampon do włosów;12.99;500;4
+80346;Gruszka;4.99;-1;1
+92714;Makaron spaghetti;2.49;500;3
+04376;Ser feta;7.99;200;3
+12563;Kiełki rzodkiewki;1.99;-1;2
+20650;Chleb słonecznikowy;5.49;500;0
+35817;Marchewka;2.49;-1;2
+48935;Musztarda;3.49;200;3
+59922;Jabłko;3.49;-1;1
+63107;Pomidory koktajlowe;5.99;-1;2
+76528;Gąbka do mycia naczyń;3.99;1;4
+83740;Truskawki;7.99;-1;1
+94853;Łosoś wędzony;29.99;200;3
+00124;Sól himalajska;4.99;500;3
+11468;Kalafior;3.99;-1;2
+27309;Mleko 2%;2.49;1000;3
+32495;Pomarańcza;2.99;-1;1
+48633;Oliwa z oliwek;14.99;500;3
+55926;Papier toaletowy;9.99;4;4
+66218;Winogrona;5.99;-1;1
+77836;Papryka zielona;3.99;-1;2
+89954;Cukier;8.99;500;3
+93610;Ananas;9.99;-1;1
+04217;Chipsy ziemniaczane;3.99;100;3
+18795;Pomidor;2.99;-1;2
+25983;Jogurt naturalny;2.49;250;3
+34501;Szynka z indyka;7.99;200;3
+46980;Kawa mielona;12.99;250;3
+56872;Ser kozi;9.99;200;3
+62549;Ryż brązowy;4.99;500;3
+76130;Pędy bambusa;2.99;-1;2
+87642;Czarna porzeczka;6.99;-1;1
+90807;Żel pod prysznic;8.99;500;4
+04362;Jabłka Granny Smith;6.99;-1;1
+12259;Kasza gryczana;3.99;500;3
+27509;Rukola;2.99;-1;2
+31908;Makrela wędzona;14.99;200;3
+48506;Sos sojowy;4.99;250;3
+58247;Chleb pszenny;4.99;500;0
+67692;Orzechy laskowe;12.99;200;3
+72385;Pęczak;3.99;500;3
+83870;Buraki czerwone;2.49;-1;2
+94531;Łosoś norweski;39.99;200;3
+00269;Mąka orkiszowa;2.49;500;3
+11394;Gruszki konferencja;5.99;-1;1
+26758;Pomidory malinowe;6.99;-1;2
+32705;Mleko 3,2%;2.49;1000;3
+47296;Ser pleśniowy;19.99;200;3
+56933;Szparagi;7.99;-1;2
+69420;Fasola czerwona;3.99;500;2
+77139;Kiść winogron;8.99;-1;1
+89756;Ziemniaki;1.99;-1;2
+93516;Anchois;8.99;200;3
+00864;Szalotka;2.99;-1;2
+04363;Śliwki węgierki;7.99;-1;1
+07263;Łosoś świeży;49.99;200;3
+12357;Pesto bazyliowe;12.99;100;3
+14128;Mandarynki;4.99;-1;1
+18502;Ser gouda;14.99;200;3
+20976;Piernik;7.99;500;3
+24865;Twaróg półtłusty;4.99;200;3
+27693;Papryka czerwona;4.99;-1;2
+31582;Kanapki z łososiem;10.99;100;3
+32107;Jogurt owocowy;1.99;250;3
+36594;Piersi z kurczaka;12.99;200;3
+40157;Grzyby shiitake;9.99;-1;2
+44736;Chleb żytni;5.99;500;0
+48951;Mleko bez laktozy;3.99;1000;3
+51628;Orzechy włoskie;22.99;200;3
+56179;Kiełbasa wiejska;13.99;200;3
+60927;Bakłażan;4.99;-1;2
+64410;Dorsz;29.99;200;3
+67736;Kuskus;4.99;500;3
+70288;Żurek;5.99;500;3
+74273;Mango;5.99;-1;1
+77781;Ser kozi z ziołami;10.99;200;3
+80293;Krewetki;24.99;200;3
+84765;Czereśnie;8.99;-1;1
+88643;Jajka kurze;3.99;10;3
+91835;Pesto z suszonych pomidorów;14.99;100;3
+95476;Pieczywo chrupkie;2.49;100;3
+00734;Oliwki zielone;5.99;-1;1
+05196;Cukier trzcinowy;3.99;500;3
+09158;Ryż dziki;8.99;500;3
+13479;Chipsy kukurydziane;3.99;100;3
+16721;Jagody goji;14.99;-1;1
+20174;Czosnek;3.49;-1;2
+24006;Majonez;4.99;250;3
+28235;Ser gorgonzola;8.99;200;3
+31694;Herbata zielona;7.99;100;3
+35712;Miód rzepakowy;11.99;500;3
+39481;Sok z cytryny;3.99;500;3
+43002;Czarny bez;2.49;-1;1
+47589;Grzyby mun;9.99;-1;2
+51827;Kanapki z tuńczykiem;10.99;100;3
+37162;Kawa;16.99;250;3
+73815;Lampka nocna;39.99;450;4
+27913;Klej;5.99;50;4
+65427;Czekolada;3.49;100;3
+89165;Zestaw śrubokrętów;29.99;750;4
+12083;Gruszka;7.99;-1;1
+65792;Klej do drewna;8.99;50;4
+94137;Krzesło;99.99;4000;4
+52340;Lalka;59.99;300;4
+14502;Ser żółty;11.99;150;3
+41358;Piła;49.99;300;4
+76034;Mleko;2.99;1000;3
+82501;Okulary przeciwsłoneczne;69.99;50;4
+93462;Łopata;29.99;500;4
+27845;Mąka pszenna;2.49;1000;3
+73610;Pojemnik na żywność;24.99;1500;4
+15974;Kubek;6.99;250;4
+94672;Cebula;3.49;-1;2
+72489;Zestaw kluczy nasadowych;69.99;1000;4
+38615;Cukier biały;2.99;1000;3
+91503;Odkurzacz;349.99;6000;4
+30286;Woda mineralna;1.99;1000;3
+65017;Zegarek;149.99;50;4
+92571;Siekiera;69.99;1500;4
+42853;Chusteczki higieniczne;3.49;100;4
+86402;Banany;6.99;-1;1
+27390;Deska do krojenia;19.99;500;4
+72649;Szpachelka;7.99;50;4
+49071;Kubek termiczny;24.99;500;4
+81523;Pianka do golenia;8.99;200;4
+94036;Pasta do zębów;7.99;100;4
+50792;Kartka papieru kolorowego;3.49;50;4
+13925;Kapusta;2.99;-1;1
+95617;Zestaw noży kuchennych;149.99;1000;4
+31827;Rower górski;1599.99;15000;4
+69253;Sos pomidorowy;3.99;500;3
+18347;Zestaw wkrętarek;19.99;250;4
+52496;Ser mozzarella;14.99;200;3
+85931;Nawilżacz powietrza;79.99;3000;4
+24567;Książka;29.99;500;4
+68315;Rękawice robocze;12.99;100;4
+92713;Grejpfrut;3.99;-1;1
+42603;Kaczka;43.99;1200;4
+76540;Kartofle;2.99;-1;2
+30765;Olej;9.99;750;4
+89562;Wódka;24.99;700;4
+57392;Orzechy;15.99;250;3
+47531;Klementynki;7.99;-1;1
+58301;Miód;23.99;500;4
+19847;Jagody;12.99;100;1
+27139;Herbata;14.99;100;3
+38249;Bazylia;5.99;-1;2
+91047;Brokuły;3.99;-1;2
+47921;Oliwki;11.99;250;3
+83275;Twaróg;4.99;250;3
+51806;Herbatniki;3.99;250;3
+39750;Kukurydza;4.99;-1;2
+60421;Szpinak;4.99;-1;2
+18370;Kiełbasa;11.99;400;4

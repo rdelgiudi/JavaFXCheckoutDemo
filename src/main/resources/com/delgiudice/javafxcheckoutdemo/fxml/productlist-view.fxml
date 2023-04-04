@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to right, #ad5389, #3c1053);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.delgiudice.javafxcheckoutdemo.ProductListController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <Button fx:id="allButton" disable="true" focusTraversable="false" mnemonicParsing="false" onAction="#gridDisplayAll" prefHeight="151.0" prefWidth="147.0" style="-fx-background-color: linear-gradient(to top right, #2d388a, #00aeef);" text="Wszystkie" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="breadButton" focusTraversable="false" mnemonicParsing="false" onAction="#gridDisplayBread" prefHeight="151.0" prefWidth="147.0" style="-fx-background-color: linear-gradient(to top right, #2d388a, #00aeef);" text="Pieczywo" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="fruitButton" focusTraversable="false" mnemonicParsing="false" onAction="#gridDisplayFruit" prefHeight="151.0" prefWidth="147.0" style="-fx-background-color: linear-gradient(to top right, #2d388a, #00aeef);" text="Owoce" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="vegetableButton" focusTraversable="false" mnemonicParsing="false" onAction="#gridDisplayVegetable" prefHeight="151.0" prefWidth="147.0" style="-fx-background-color: linear-gradient(to top right, #2d388a, #00aeef);" text="Warzywa" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="otherFoodButton" focusTraversable="false" mnemonicParsing="false" onAction="#gridDisplayOtherFood" prefHeight="151.0" prefWidth="147.0" style="-fx-background-color: linear-gradient(to top right, #2d388a, #00aeef);" text="Inne jedzenie" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="otherButton" focusTraversable="false" mnemonicParsing="false" onAction="#gridDisplayOther" prefHeight="151.0" prefWidth="147.0" style="-fx-background-color: linear-gradient(to top right, #2d388a, #00aeef);" text="Inne" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="15.0" />
+               </font></Button>
+         </children>
+      </HBox>
+      <ScrollPane layoutX="32.0" layoutY="119.0" prefHeight="510.0" prefWidth="1180.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <content>
+            <GridPane fx:id="productGrid" alignment="CENTER" hgap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="1240.0" vgap="10.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints fillHeight="false" minHeight="82.0" prefHeight="90.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="681.0" mnemonicParsing="false" onAction="#returnToMain" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #87CEEB;" text="Wróć" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
+   </children>
+</AnchorPane>
