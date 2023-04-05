@@ -15,8 +15,10 @@ public class CheckoutApplication extends Application {
         //FXMLLoader fxmlLoader = new FXMLLoader(CheckoutApplication.class.getResource("checkout-view.fxml"));
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("fxml/checkout-view.fxml")));
         Scene scene = new Scene(root);
-        stage.setTitle("Checkout application");
+        stage.setTitle("Kasa");
         stage.setScene(scene);
+        stage.setMinWidth(1280);
+        stage.setMinHeight(720);
         stage.show();
     }
 

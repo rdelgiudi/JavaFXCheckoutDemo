@@ -5,10 +5,7 @@ import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ContentDisplay;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -22,17 +19,18 @@ import java.util.List;
 public class ProductListController {
 
     private List<ProductTemplate> productList;
-
     private Scene previousScene;
-
     private TextField codeField;
-
     private Label successLabel;
+
+    private ProductType currentType = ProductType.ANY;
 
     @FXML
     private Button allButton, breadButton, fruitButton, vegetableButton, otherFoodButton, otherButton, backButton;
     @FXML
     private GridPane productGrid;
+    @FXML
+    private ScrollPane scrollPane;
 
     public void loadProductList(List<ProductTemplate> productList) {
         this.productList = productList;
@@ -48,6 +46,15 @@ public class ProductListController {
 
     public void setSuccessLabel(Label label) {
         successLabel = label;
+    }
+
+    public void initialize() {
+        scrollPane.widthProperty().addListener((obs, oldVal, newVal) -> {
+            productGrid.getChildren().clear();
+            populateProductGrid();
+        });
+
+        allButton.setDisable(true);
     }
 
     // Metoda aktywująca wszystkie guziki
@@ -69,18 +76,28 @@ public class ProductListController {
     }
 
     // Metoda zapełniająca siatkę produktami, zależnie od sprecyzowanego typu
-    public void populateProductGrid(ProductType type) {
+    public void populateProductGrid() {
+        double space = scrollPane.getWidth();
+        int maxI;
+        if (space > 0) {
+            maxI = (int) Math.floor((space - 20) / 200);
+            productGrid.setPrefWidth((maxI * 200) + 10);
+        }
+        else
+            maxI = 6;
         int i = 0, j = 0;
         for (ProductTemplate product : productList) {
-            if (product.getProductType() == type || type == ProductType.ANY) {
+            if (product.getProductType() == currentType || currentType == ProductType.ANY) {
                 addProductToGrid(product, i, j);
                 i++;
-                if (i > 6) {
+                if (i >= maxI) {
                     i = 0;
                     j++;
                 }
             }
         }
+        if (j == 0)
+            productGrid.setPrefWidth(i * 180);
     }
 
     // Metoda czyszcząca siatkę
@@ -93,42 +110,48 @@ public class ProductListController {
     @FXML
     public void gridDisplayAll() {
         clearGrid();
-        populateProductGrid(ProductType.ANY);
+        currentType = ProductType.ANY;
+        populateProductGrid();
         allButton.setDisable(true);
     }
 
     @FXML
     public void gridDisplayBread() {
         clearGrid();
-        populateProductGrid(ProductType.BREAD);
+        currentType = ProductType.BREAD;
+        populateProductGrid();
         breadButton.setDisable(true);
     }
 
     @FXML
     public void gridDisplayFruit() {
         clearGrid();
-        populateProductGrid(ProductType.FRUIT);
+        currentType = ProductType.FRUIT;
+        populateProductGrid();
         fruitButton.setDisable(true);
     }
 
     @FXML
     public void gridDisplayVegetable() {
         clearGrid();
-        populateProductGrid(ProductType.VEGETABLE);
+        currentType = ProductType.VEGETABLE;
+        populateProductGrid();
         vegetableButton.setDisable(true);
     }
 
     @FXML
     public void gridDisplayOtherFood() {
         clearGrid();
-        populateProductGrid(ProductType.GENERAL_FOOD);
+        currentType = ProductType.GENERAL_FOOD;
+        populateProductGrid();
         otherFoodButton.setDisable(true);
     }
 
     @FXML
     public void gridDisplayOther() {
         clearGrid();
-        populateProductGrid(ProductType.OTHER);
+        currentType = ProductType.OTHER;
+        populateProductGrid();
         otherButton.setDisable(true);
     }
 
@@ -146,11 +169,11 @@ public class ProductListController {
         button.setAlignment(Pos.CENTER);
         button.setStyle("-fx-background-color: #ADD8E6;");
 
-
-        button.setPrefWidth(170);
-        button.setMinWidth(170);
-        button.setPrefHeight(90);
-        button.setMinHeight(90);
+        //button.setMaxWidth(170);
+        //button.setMinWidth(170);
+        //button.setMaxHeight(90);
+        //button.setMinHeight(90);
+        button.setPrefSize(190, 90);
 
         button.setOnAction(actionEvent -> {
             codeField.setText(product.getProductCode());

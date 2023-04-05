@@ -96,6 +96,8 @@ public class CheckoutController {
         FXMLLoader fxmlLoader = new FXMLLoader(Objects.requireNonNull(getClass().getResource("fxml/productlist-view.fxml")));
         loaderScene = new Scene(fxmlLoader.load());
         stage = (Stage) productListButton.getScene().getWindow();
+        double oldWidth = stage.getWidth();
+        double oldHeight = stage.getHeight();
 
         // Przesłanie kontrollerowi niezbędnych danych oraz inicjalizacja
         ProductListController controller = fxmlLoader.getController();
@@ -103,9 +105,11 @@ public class CheckoutController {
         controller.loadProductList(loader.getProductList());
         controller.setCodeField(codeField);
         controller.setSuccessLabel(productSuccess);
-        controller.populateProductGrid(ProductType.ANY);
+        //controller.populateProductGrid();
 
         stage.setScene(loaderScene);
+        stage.setWidth(oldWidth);
+        stage.setHeight(oldHeight);
         stage.show();
     }
 
