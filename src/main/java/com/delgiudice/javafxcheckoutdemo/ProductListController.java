@@ -12,7 +12,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.util.List;
+import java.util.Objects;
 
 // Klasa sterująca listą produktów, która pozwala na znalezenie produktu bez znajomości jego kodu,
 // zastępuje także skaner kodów kreskowych w prawdziwej kasie
@@ -24,6 +26,7 @@ public class ProductListController {
     private Label successLabel;
 
     private ProductType currentType = ProductType.ANY;
+    private Image defaultIcon;
 
     @FXML
     private Button allButton, breadButton, fruitButton, vegetableButton, otherFoodButton, otherButton, backButton;
@@ -55,6 +58,9 @@ public class ProductListController {
         });
 
         allButton.setDisable(true);
+
+        defaultIcon = new Image("/default.png", 80, 80, true,
+                true, true);
     }
 
     // Metoda aktywująca wszystkie guziki
@@ -97,7 +103,7 @@ public class ProductListController {
             }
         }
         if (j == 0)
-            productGrid.setPrefWidth(i * 180);
+            productGrid.setPrefWidth((i * 200) + 10);
     }
 
     // Metoda czyszcząca siatkę
@@ -161,9 +167,16 @@ public class ProductListController {
 
         button.setText(product.getProductName());
         button.setFont(Font.font("Verdana", 11));
-        Image icon = new Image(product.getIconPath(), 30, 30, true,
-               true, true);
-        ImageView imageView = new ImageView(icon);
+        ImageView imageView;
+
+        if (!Objects.equals(product.getIconPath(), "")){
+            File iconFile = new File(product.getIconPath());
+            Image icon = new Image(iconFile.toURI().toString(), 80, 80, true,
+                    true, true);
+            imageView = new ImageView(icon);
+        }
+        else
+            imageView = new ImageView(defaultIcon);
         button.setGraphic(imageView);
         button.setContentDisplay(ContentDisplay.TOP);
         button.setAlignment(Pos.CENTER);
@@ -173,7 +186,7 @@ public class ProductListController {
         //button.setMinWidth(170);
         //button.setMaxHeight(90);
         //button.setMinHeight(90);
-        button.setPrefSize(190, 90);
+        button.setPrefSize(190, 120);
 
         button.setOnAction(actionEvent -> {
             codeField.setText(product.getProductCode());

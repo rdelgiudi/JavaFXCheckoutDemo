@@ -26,7 +26,7 @@ public class ProductLoader {
 
         // Sprawdzenie poprawności danych: ilość wydobytych danych oraz długość uzyskanego kodu
         // Kod powinien być 5-cyfrowy
-        if (splitData.length == 5 && splitData[0].length() == 5) {
+        if (splitData.length >= 5 && splitData.length <= 6 && splitData[0].length() == 5) {
 
             float price;
             int weight, productInt;
@@ -36,6 +36,7 @@ public class ProductLoader {
                 price = Float.parseFloat(splitData[2]);
                 weight = Integer.parseInt(splitData[3]);
                 productInt = Integer.parseInt(splitData[4]);
+
             } catch (NumberFormatException e) {
                 System.out.println("Incorrect data format, check the data and try again.");
                 throw new RuntimeException(e);
@@ -43,7 +44,11 @@ public class ProductLoader {
             price *= 100;
             long priceLong = (long)price;
             ProductType productType = ProductType.values()[productInt];
-            ProductTemplate productTemplate = new ProductTemplate(splitData[0], splitData[1], priceLong, weight, productType);
+            ProductTemplate productTemplate;
+            if (splitData.length == 5)
+                productTemplate = new ProductTemplate(splitData[0], splitData[1], priceLong, weight, productType);
+            else
+                productTemplate = new ProductTemplate(splitData[0], splitData[1], priceLong, weight, productType, splitData[5]);
 
             // Weryfikacja istnienia duplikatów w kodzie, powinien być tylko jeden reprezentant danego kodu
             for (ProductTemplate template : productTemplateList) {
@@ -59,9 +64,11 @@ public class ProductLoader {
                     productTemplate.getProductCode(), productTemplate.getDisplayProductPrice());
 
             if (!productTemplate.isPriceByWeight())
-                System.out.printf(", weight %d g %n", productTemplate.getProductWeight());
+                System.out.printf(", weight %d g", productTemplate.getProductWeight());
             else
-                System.out.printf("/kg %n");
+                System.out.printf("/kg");
+
+            System.out.printf(", custom icon: %s%n", productTemplate.getIconPath());
         }
         else {
             System.out.println("[DEBUG] Error loading data, incorrect format.");

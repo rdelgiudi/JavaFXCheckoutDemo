@@ -1,5 +1,5 @@
 09871;Bułka pszenna;0.99;100;0
-23710;Kiwi;4.99;-1;1
+23710;Kiwi;4.99;-1;1;icons/kiwi.png
 31289;Cebula dymka;1.49;-1;2
 46035;Mydło w płynie;9.99;500;4
 58620;Cytryna;3.99;-1;1
@@ -124,7 +124,7 @@
 65017;Zegarek;149.99;50;4
 92571;Siekiera;69.99;1500;4
 42853;Chusteczki higieniczne;3.49;100;4
-86402;Banany;6.99;-1;1
+86402;Banany;6.99;-1;1;icons/banana.png
 27390;Deska do krojenia;19.99;500;4
 72649;Szpachelka;7.99;50;4
 49071;Kubek termiczny;24.99;500;4

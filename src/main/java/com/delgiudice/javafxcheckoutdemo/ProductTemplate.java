@@ -50,7 +50,7 @@ public class ProductTemplate {
         productWeight = weight;
         priceByWeight = productWeight == -1;
         productType = type;
-        iconPath = "/default.png";
+        iconPath = "";
     }
     public ProductTemplate(String code, String name, long price, int weight, ProductType type, String icon) {
         productCode = code;

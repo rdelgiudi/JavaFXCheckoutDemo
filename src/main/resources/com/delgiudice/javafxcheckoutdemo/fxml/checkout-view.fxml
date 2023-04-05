@@ -48,7 +48,7 @@
             </Label>
          </children>
       </VBox>
-      <VBox fx:id="cardPaymentBox" alignment="CENTER" layoutX="790.0" layoutY="58.0" prefHeight="262.0" prefWidth="468.0" visible="false">
+      <VBox fx:id="cardPaymentBox" alignment="CENTER" layoutX="780.0" layoutY="48.0" prefHeight="262.0" prefWidth="468.0" visible="false">
          <children>
             <Label alignment="CENTER" prefHeight="68.0" prefWidth="522.0" text="Płatność kartą:" textFill="WHITE">
                <font>

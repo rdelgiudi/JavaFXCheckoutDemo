@@ -17,6 +17,8 @@ public class CheckoutApplication extends Application {
         Scene scene = new Scene(root);
         stage.setTitle("Kasa");
         stage.setScene(scene);
+        stage.setWidth(1280);
+        stage.setHeight(720);
         stage.setMinWidth(1280);
         stage.setMinHeight(720);
         stage.show();
