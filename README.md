@@ -12,7 +12,7 @@ Aby skompilować symulator samoobsługowej kasy rekomenduję openjdk-20.
 
 - Sklonuj repozytorium na swój komputer.
 - Otwórz projekt w wybramym przez siebie IDE (projekt stworzony za pomocą Intellij IDEA).
-- Skompiluj projekt i uruchom plik CheckoutApplication.java.
+- Skompiluj projekt i uruchom (klasa Main).
 
 ## Obsługa
 
