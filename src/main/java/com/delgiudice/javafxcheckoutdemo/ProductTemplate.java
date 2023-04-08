@@ -1,5 +1,7 @@
 package com.delgiudice.javafxcheckoutdemo;
 
+import java.io.File;
+
 // Klasa reprezentująca produkt z bazy danych
 public class ProductTemplate {
 
@@ -59,7 +61,11 @@ public class ProductTemplate {
         productWeight = weight;
         priceByWeight = productWeight == -1;
         productType = type;
-        iconPath = icon;
+        File checkFile = new File(icon);
+        if (checkFile.exists())
+            iconPath = icon;
+        else
+            iconPath = "";
     }
 
 }
